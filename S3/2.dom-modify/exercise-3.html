@@ -1,0 +1,22 @@
+<!-- Inserta dinamicamente en un html un div que contenga 6 p utilizando un loop con javascript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let body = document.querySelector('body');
+        let div = document.createElement('div');
+        body.appendChild(div);
+
+        for (let i = 0; i < 6; i++) {
+            let paragraph = document.createElement('p');
+            body.appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- Dado el siguiente javascript y html. Añade la funcionalidad necesaria usando fetch()
+    para hacer una consulta a la api cuando se haga click en el botón,
+    pasando como parametro de la api, el valor del input. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>Consultar</button>
+</body>
+    <script>
+        let body$$ = document.querySelector('body');
+        let button$$ = document.querySelector('button');
+        let container$$ = document.createElement('div');
+        body$$.append(container$$);
+
+        button$$.addEventListener('click', () => {
+            let input$$ = document.querySelector('input');
+            container$$.innerHTML = "";
+            const request = fetch(`https://api.nationalize.io?name=${input$$.value}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data) {
+                        const htmlStr = `
+                        <div>
+                            <h2>Nombre</h2>
+                            <p>${data.name}</p>
+                        </div>
+                        <div>
+                            <h2>¿Cuantos nombres como ${data.name} hay en el mundo?</h2>
+                            <p>${data.count}</p>
+                        </div>
+                        <div>
+                            <h2>Los ${data.country.length} paises con más % de ${data.name}.</h2>
+                            <table>
+                                <thead>
+                                    <th>${data.country[0].country_id}</th>
+                                    <th>${data.country[1].country_id}</th>
+                                    <th>${data.country[2].country_id}</th>
+                                    <th>${data.country[3].country_id}</th>
+                                    <th>${data.country[4].country_id}</th>
+                                </thead>
+                                <tr>
+                                    <td>${(data.country[0].probability) * 100 + ' %'}</td>
+                                    <td>${(data.country[1].probability) * 100 + ' %'}</td>
+                                    <td>${(data.country[2].probability) * 100 + ' %'}</td>
+                                    <td>${(data.country[3].probability) * 100 + ' %'}</td>
+                                    <td>${(data.country[4].probability) * 100 + ' %'}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        `;
+                        container$$.insertAdjacentHTML('beforeend', htmlStr);
+                    }
+                })
+                .catch(error => console.error(error));
+        })
+    </script>
+</html>

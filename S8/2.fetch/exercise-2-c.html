@@ -1,0 +1,49 @@
+<!-- En base al ejercicio anterior, crea un botón con el texto 'X' para cada uno de los p
+que hayas insertado y que si el usuario hace click en este botón eliminemos el parrafo asociado. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="busqueda" type="text">
+    <button id="consultar">Consultar</button>
+</body>
+    <script>
+        const busquedas = new Array;
+        let button$$ = document.querySelector('#consultar');
+        let body$$ = document.querySelector('body');
+        let container$$= document.createElement('div');
+        body$$.append(container$$);
+
+        button$$.addEventListener('click', () => {
+            let input$$ = document.querySelector('#busqueda');
+            if(busquedas.includes(input$$.value)) {
+                alert(`Ya has hecho esa búsqueda, no pedes buscar dos veces la misma persona. Si quieres consultarla está en la posición ${busquedas.indexOf(input$$.value) + 1}`);
+            } else {
+                busquedas.push(input$$.value);
+                const request = fetch(`https://api.nationalize.io?name=${input$$.value}`)
+                    .then(response => response.json())
+                    .then(data => {//COMO LE DEJO SOLO A DOS DECIMALES CON LA EXPRESIÓN ${}
+                        let htmlStr = `
+                        <div id="${data.name}-container">
+                            <p>El nombre ${data.name} tiene un ${data.country[0].probability * 100}% de ser de ${data.country[0].country_id} y un ${data.country[1].probability * 100}% de ser de ${data.country[1].country_id}.</p>
+                            <button id="${data.name}-button">Borrar</button>
+                        </div>`
+                        container$$.insertAdjacentHTML('beforeend', htmlStr);
+                        let busquedaButton$$ = document.querySelector(`#${data.name}-button`);
+                        let busquedaContainer$$ = document.querySelector(`#${data.name}-container`);
+                        busquedaButton$$.addEventListener('click', (event) => {
+                            container$$.removeChild(busquedaContainer$$);
+                            busquedas.splice(busquedas.indexOf(data.name), 1);
+                        })
+                    })
+                    .catch(error => console.error(error));
+            }
+        })
+    </script>
+</html>

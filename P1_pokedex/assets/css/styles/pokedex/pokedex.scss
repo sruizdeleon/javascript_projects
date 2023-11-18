@@ -1,0 +1,14 @@
+/* IMPORTS LIST */
+
+/* Variables, colors, fonts, etc */
+@import '../../others/var/_variables.scss';
+
+/* General styles. Reset browser default and apply styles to all pages. */
+@import '../../others/general/_general.scss';
+
+/* Specific styles of page */
+@import '../../others/page/_pokedex.scss';
+
+/* Blocks used in others pages */
+@import '../../others/blocks/_blocks.scss';
+

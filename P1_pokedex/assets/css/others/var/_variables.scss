@@ -1,7 +1,289 @@
-/* FONTS */
+/* DISPLAY LAYOUTS */
+
+$layout_bp_desktop: 380px;
+
+// Mixins layouts
+
+@mixin desktop {
+    @media only screen and (min-width: #{$layout_bp_desktop}) {
+        @content;
+    }
+}
+
+%display-flex-column-justifyCenter-alingCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+%display-flex-column-justifyCenter-alingCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+%display-flex-column-justifyCenter-alingCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+%display-flex-column-justifyCenter-alingCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /* PANTONE */
 
+// BACKGROUND COLORS
+$color-background-yellow: rgb(255, 209, 1);
+$color-background-dark-blue: rgb(5, 54, 80);
+
+// Grado de transparencia variable
+$trans: 0.7;
+
+/* TYPES COLORS */
+
+// Cuatro tonos por cada tipo de pokemon.
+//Bug
+$color-type-bug-color1: rgb(150, 135, 89);
+$color-type-bug-color2: rgb(125, 110, 69);
+$color-type-bug-color3: rgb(107, 92, 54);
+$color-type-bug-color4: rgb(89, 74, 40);
+$color-type-bug-color1--trans: rgba(150, 135, 89, $trans);
+$color-type-bug-color2--trans: rgba(125, 110, 69, $trans);
+$color-type-bug-color3--trans: rgba(107, 92, 54, $trans);
+$color-type-bug-color4--trans: rgba(89, 74, 40, $trans);
+// Dragon
+$color-type-dragon-color1: rgb(87, 104, 52);
+$color-type-dragon-color2: rgb(70, 87, 38);
+$color-type-dragon-color3: rgb(57, 75, 28);
+$color-type-dragon-color4: rgb(45, 62, 18);
+$color-type-dragon-color1--trans: rgba(87, 104, 52, $trans);
+$color-type-dragon-color2--trans: rgba(70, 87, 38, $trans);
+$color-type-dragon-color3--trans: rgba(57, 75, 28, $trans);
+$color-type-dragon-color4--trans: rgba(45, 62, 18, $trans);
+// Electric
+$color-type-electric-color1: rgb(250, 228, 63);
+$color-type-electric-color2: rgb(233, 208, 35);
+$color-type-electric-color3: rgb(198, 172, 5);
+$color-type-electric-color4: rgb(161, 138, 4);
+$color-type-electric-color1--trans: rgba(250, 228, 63, $trans);
+$color-type-electric-color2--trans: rgba(233, 208, 35, $trans);
+$color-type-electric-color3--trans: rgba(198, 172, 5, $trans);
+$color-type-electric-color4--trans: rgba(161, 138, 4, $trans);
+// Fairy
+$color-type-fairy-color1: rgb(252, 120, 145);
+$color-type-fairy-color2: rgb(238, 81, 108);
+$color-type-fairy-color3: rgb(217, 50, 77);
+$color-type-fairy-color4: rgb(189, 22, 46);
+$color-type-fairy-color1--trans: rgba(252, 120, 145, $trans);
+$color-type-fairy-color2--trans: rgba(238, 81, 108, $trans);
+$color-type-fairy-color3--trans: rgba(217, 50, 77, $trans);
+$color-type-fairy-color4--trans: rgba(189, 22, 46, $trans);
+// Fighting
+$color-type-fighting-color1: rgb(181, 53, 66);
+$color-type-fighting-color2: rgb(157, 36, 47);
+$color-type-fighting-color3: rgb(139, 21, 31);
+$color-type-fighting-color4: rgb(122, 6, 15);
+$color-type-fighting-color1--trans: rgba(181, 53, 66, $trans);
+$color-type-fighting-color2--trans: rgba(157, 36, 47, $trans);
+$color-type-fighting-color3--trans: rgba(139, 21, 31, $trans);
+$color-type-fighting-color4--trans: rgba(122, 6, 15, $trans);
+// Fire
+$color-type-fire-color1: rgb(238, 42, 51);
+$color-type-fire-color2: rgb(209, 15, 23);
+$color-type-fire-color3: rgb(185, 3, 10);
+$color-type-fire-color4: rgb(161, 3, 8);
+$color-type-fire-color1--trans: rgba(238, 42, 51, $trans);
+$color-type-fire-color2--trans: rgba(209, 15, 23, $trans);
+$color-type-fire-color3--trans: rgba(185, 3, 10, $trans);
+$color-type-fire-color4--trans: rgba(161, 3, 8, $trans);
+// Flying
+$color-type-flying-color1: rgb(220, 244, 74);
+$color-type-flying-color2: rgb(199, 225, 47);
+$color-type-flying-color3: rgb(163, 193, 7);
+$color-type-flying-color4: rgb(132, 158, 6);
+$color-type-flying-color1--trans: rgba(220, 244, 74, $trans);
+$color-type-flying-color2--trans: rgba(199, 225, 47, $trans);
+$color-type-flying-color3--trans: rgba(163, 193, 7, $trans);
+$color-type-flying-color4--trans: rgba(132, 158, 6, $trans);
+// Ghost
+$color-type-ghost-color1: rgb(220, 220, 220);
+$color-type-ghost-color2: rgb(205, 205, 205);
+$color-type-ghost-color3: rgb(180, 180, 180);
+$color-type-ghost-color4: rgb(158, 158, 158);
+$color-type-ghost-color1--trans: rgba(220, 220, 220, $trans);
+$color-type-ghost-color2--trans: rgba(205, 205, 205, $trans);
+$color-type-ghost-color3--trans: rgba(180, 180, 180, $trans);
+$color-type-ghost-color4--trans: rgba(158, 158, 158, $trans);
+// Grass
+$color-type-grass-color1: rgb(93, 194, 116);
+$color-type-grass-color2: rgb(62, 163, 83);
+$color-type-grass-color3: rgb(37, 139, 57);
+$color-type-grass-color4: rgb(11, 115, 29);
+$color-type-grass-color1--trans: rgba(93, 194, 116, $trans);
+$color-type-grass-color2--trans: rgba(62, 163, 83, $trans);
+$color-type-grass-color3--trans: rgba(37, 139, 57, $trans);
+$color-type-grass-color4--trans: rgba(11, 115, 29, $trans);
+// Ground
+$color-type-ground-color1: rgb(186, 99, 62);
+$color-type-ground-color2: rgb(159, 76, 45);
+$color-type-ground-color3: rgb(139, 60, 33);
+$color-type-ground-color4: rgb(120, 44, 21);
+$color-type-ground-color1--trans: rgba(186, 99, 62, $trans);
+$color-type-ground-color2--trans: rgba(159, 76, 45, $trans);
+$color-type-ground-color3--trans: rgba(139, 60, 33, $trans);
+$color-type-ground-color4--trans: rgba(120, 44, 21, $trans);
+// Ice
+$color-type-ice-color1: rgb(95, 126, 225);
+$color-type-ice-color2: rgb(63, 94, 204);
+$color-type-ice-color3: rgb(40, 69, 184);
+$color-type-ice-color4: rgb(10, 39, 163);
+$color-type-ice-color1--trans: rgba(95, 126, 225, $trans);
+$color-type-ice-color2--trans: rgba(63, 94, 204, $trans);
+$color-type-ice-color3--trans: rgba(40, 69, 184, $trans);
+$color-type-ice-color4--trans: rgba(10, 39, 163, $trans);
+// Normal
+$color-type-normal-color1: rgb(226, 203, 190);
+$color-type-normal-color2: rgb(190, 164, 152);
+$color-type-normal-color3: rgb(164, 136, 124);
+$color-type-normal-color4: rgb(137, 109, 98);
+$color-type-normal-color1--trans: rgba(226, 203, 190, $trans);
+$color-type-normal-color2--trans: rgba(190, 164, 152, $trans);
+$color-type-normal-color3--trans: rgba(164, 136, 124, $trans);
+$color-type-normal-color4--trans: rgba(137, 109, 98, $trans);
+// Poison
+$color-type-poison-color1: rgb(94, 59, 196);
+$color-type-poison-color2: rgb(80, 35, 168);
+$color-type-poison-color3: rgb(69, 20, 143);
+$color-type-poison-color4: rgb(60, 8, 127);
+$color-type-poison-color1--trans: rgba(94, 59, 196, $trans);
+$color-type-poison-color2--trans: rgba(80, 35, 168, $trans);
+$color-type-poison-color3--trans: rgba(69, 20, 143, $trans);
+$color-type-poison-color4--trans: rgba(60, 8, 127, $trans);
+// Psychic
+$color-type-psychic-color1: rgb(210, 149, 255);
+$color-type-psychic-color2: rgb(191, 107, 253);
+$color-type-psychic-color3: rgb(166, 76, 233);
+$color-type-psychic-color4: rgb(141, 45, 213);
+$color-type-psychic-color1--trans: rgba(210, 149, 255, $trans);
+$color-type-psychic-color2--trans: rgba(191, 107, 253, $trans);
+$color-type-psychic-color3--trans: rgba(166, 76, 233, $trans);
+$color-type-psychic-color4--trans: rgba(141, 45, 213, $trans);
+// Rock
+$color-type-rock-color1: rgb(213, 177, 165);
+$color-type-rock-color2: rgb(181, 142, 131);
+$color-type-rock-color3: rgb(158, 117, 106);
+$color-type-rock-color4: rgb(132, 93, 84);
+$color-type-rock-color1--trans: rgba(213, 177, 165, $trans);
+$color-type-rock-color2--trans: rgba(181, 142, 131, $trans);
+$color-type-rock-color3--trans: rgba(158, 117, 106, $trans);
+$color-type-rock-color4--trans: rgba(132, 93, 84, $trans);
+// Steel
+$color-type-steel-color1: rgb(73, 120, 150);
+$color-type-steel-color2: rgb(55, 97, 128);
+$color-type-steel-color3: rgb(41, 80, 112);
+$color-type-steel-color4: rgb(25, 63, 96);
+$color-type-steel-color1--trans: rgba(73, 120, 150, $trans);
+$color-type-steel-color2--trans: rgba(55, 97, 128, $trans);
+$color-type-steel-color3--trans: rgba(41, 80, 112, $trans);
+$color-type-steel-color4--trans: rgba(25, 63, 96, $trans);
+// Watter
+$color-type-water-color1: rgb(70, 193, 193);
+$color-type-water-color2: rgb(35, 160, 160);
+$color-type-water-color3: rgb(8, 136, 136);
+$color-type-water-color4: rgb(6, 113, 113);
+$color-type-water-color1--trans: rgba(70, 193, 193, $trans);
+$color-type-water-color2--trans: rgba(35, 160, 160, $trans);
+$color-type-water-color3--trans: rgba(8, 136, 136, $trans);
+$color-type-water-color4--trans: rgba(6, 113, 113, $trans);
+
+
+// Footer colors
+// Squirtle
+$color-squirtle: #4DB3F5;
+// Bulbasaur
+$color-bulbasaur: #7DC9AB;
+// Pikachu
+$color-pikachu: #FFF152;
+// Charmander
+$color-charmander: #F68D24;
+
+
 
 /* DISPLAY STYLES */
+
+/* Neutral colors */
+$color-black: black;
+$color-white: white;
+$color-light-grey: lightgrey;
+$color-normal-grey: grey;
+$color-dark-grey: dimgray;
+
+/* Other colors */
+$color-first-blue: rgb(28, 105, 213);
+
+
+
+
+
+
+/* FONTS */
+
+/* Fonts upload */
+
+// Font Yantramanav
+@font-face {
+    font-family:'yan-100';
+    src: url('./../../ttf/yantramanav-100.ttf');
+}
+
+@font-face {
+    font-family:'yan-300';
+    src: url('./../../ttf/yantramanav-300.ttf');
+}
+
+@font-face {
+    font-family:'yan-400';
+    src: url('./../../ttf/yantramanav-400.ttf');
+}
+
+@font-face {
+    font-family:'yan-500';
+    src: url('./../../ttf/yantramanav-500.ttf');
+}
+
+@font-face {
+    font-family:'yan-700';
+    src: url('./../../ttf/yantramanav-700.ttf');
+}
+
+@font-face {
+    font-family:'yan-900';
+    src: url('./../../ttf/yantramanav-900.ttf');
+}
+
+
+
+/* Font assignment */
+
+// Yantramanav
+$font-princial-100: 'yan-100';
+$font-princial-300: 'yan-300';
+$font-princial-400: 'yan-400';
+$font-princial-500: 'yan-500';
+$font-princial-700: 'yan-700';
+$font-princial-900: 'yan-900';
+
+$font-size-extra-big: 3rem;
+$font-size-big: 2rem;
+$font-size-normal: 1.2rem;
+$font-size-small: 1.1rem;
+$font-size-extra-small: 0.7rem;

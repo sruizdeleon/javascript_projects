@@ -1,172 +1,1417 @@
 /* IMPORTS LIST */
 /* Variables, colors, fonts, etc */
-/* FONTS */
+/* DISPLAY LAYOUTS */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* PANTONE */
+/* TYPES COLORS */
 /* DISPLAY STYLES */
+/* Neutral colors */
+/* Other colors */
+/* FONTS */
+/* Fonts upload */
+@font-face {
+  font-family: "yan-100";
+  src: url("./../../ttf/yantramanav-100.ttf");
+}
+@font-face {
+  font-family: "yan-300";
+  src: url("./../../ttf/yantramanav-300.ttf");
+}
+@font-face {
+  font-family: "yan-400";
+  src: url("./../../ttf/yantramanav-400.ttf");
+}
+@font-face {
+  font-family: "yan-500";
+  src: url("./../../ttf/yantramanav-500.ttf");
+}
+@font-face {
+  font-family: "yan-700";
+  src: url("./../../ttf/yantramanav-700.ttf");
+}
+@font-face {
+  font-family: "yan-900";
+  src: url("./../../ttf/yantramanav-900.ttf");
+}
+/* Font assignment */
 /* General styles. Reset browser default and apply styles to all pages. */
 /* IMPORTS */
-/* FONTS */
+/* DISPLAY LAYOUTS */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* PANTONE */
+/* TYPES COLORS */
 /* DISPLAY STYLES */
+/* Neutral colors */
+/* Other colors */
+/* FONTS */
+/* Fonts upload */
+@font-face {
+  font-family: "yan-100";
+  src: url("./../../ttf/yantramanav-100.ttf");
+}
+@font-face {
+  font-family: "yan-300";
+  src: url("./../../ttf/yantramanav-300.ttf");
+}
+@font-face {
+  font-family: "yan-400";
+  src: url("./../../ttf/yantramanav-400.ttf");
+}
+@font-face {
+  font-family: "yan-500";
+  src: url("./../../ttf/yantramanav-500.ttf");
+}
+@font-face {
+  font-family: "yan-700";
+  src: url("./../../ttf/yantramanav-700.ttf");
+}
+@font-face {
+  font-family: "yan-900";
+  src: url("./../../ttf/yantramanav-900.ttf");
+}
+/* Font assignment */
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* STYLES */
 body {
-  background-color: orangered;
   margin: 0;
   font-family: rubik;
+  background-color: white;
+  background-image: url("../../../img/pokewallpaper.png");
+  background-size: 700px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 78vh;
+}
+
+/* HEADERS STYLES */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 100;
+}
+.header__container-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: rgb(255, 209, 1);
+}
+.header__logo {
+  height: 8vh;
+  padding: 10px 0px;
+}
+@media only screen and (min-width: 380px) {
+  .header__logo {
+    height: 10vh;
+    padding: 10px 0px;
+  }
+}
+.header__img-pikachu {
+  height: 6vh;
+  margin: 0px 10px;
+}
+@media only screen and (min-width: 380px) {
+  .header__img-pikachu {
+    height: 10vh;
+    margin: 0px 10px;
+  }
+}
+.header__container-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(5, 54, 80);
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px 0px;
+}
+.header__filter-button {
+  border: none;
+  background-color: rgb(5, 54, 80);
+  width: 100%;
+  height: 3vh;
   color: white;
+  font-family: "yan-500";
+  font-size: 1.1rem;
+}
+.header__container-filter-button {
+  display: flex;
+  flex-direction: row;
+}
+.header__filter-arrow {
+  fill: white;
+  width: 20px;
+  height: 20px;
 }
 
-.container {
-  padding: 40px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 50px;
-}
-
-#pokedex {
-  padding-inline-start: 0;
+/* FOOTER STYLES */
+.footer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(255, 209, 1);
+}
+.footer__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__container-squirtle {
+  background-color: #4DB3F5;
+  background-image: linear-gradient(90deg, #4DB3F5, #4DB3F5, #4DB3F5, #7DC9AB);
+}
+.footer__container-bulbasaur {
+  background-color: #7DC9AB;
+  background-image: linear-gradient(90deg, #7DC9AB, #7DC9AB, #7DC9AB, #FFF152);
+}
+.footer__container-pikachu {
+  background-color: #FFF152;
+  background-image: linear-gradient(90deg, #FFF152, #FFF152, #FFF152, #F68D24);
+}
+.footer__container-charmander {
+  background-color: #F68D24;
+  background-image: linear-gradient(90deg, #F68D24);
+}
+.footer__img {
+  height: 60px;
 }
 
-@keyframes bounce {
-  20% {
-    transform: translateY(-6px);
-  }
-  40% {
-    transform: translateY(0px);
-  }
-  60% {
-    transform: translateY(-2px);
-  }
-  80% {
-    transform: translateY(0px);
-  }
-}
 /* Specific styles of page */
 /* IMPORTS */
-/* FONTS */
+/* DISPLAY LAYOUTS */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* PANTONE */
+/* TYPES COLORS */
 /* DISPLAY STYLES */
+/* Neutral colors */
+/* Other colors */
+/* FONTS */
+/* Fonts upload */
+@font-face {
+  font-family: "yan-100";
+  src: url("./../../ttf/yantramanav-100.ttf");
+}
+@font-face {
+  font-family: "yan-300";
+  src: url("./../../ttf/yantramanav-300.ttf");
+}
+@font-face {
+  font-family: "yan-400";
+  src: url("./../../ttf/yantramanav-400.ttf");
+}
+@font-face {
+  font-family: "yan-500";
+  src: url("./../../ttf/yantramanav-500.ttf");
+}
+@font-face {
+  font-family: "yan-700";
+  src: url("./../../ttf/yantramanav-700.ttf");
+}
+@font-face {
+  font-family: "yan-900";
+  src: url("./../../ttf/yantramanav-900.ttf");
+}
+/* Font assignment */
 /* IMPORTS */
-/* FONTS */
+/* DISPLAY LAYOUTS */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* PANTONE */
+/* TYPES COLORS */
 /* DISPLAY STYLES */
+/* Neutral colors */
+/* Other colors */
+/* FONTS */
+/* Fonts upload */
+@font-face {
+  font-family: "yan-100";
+  src: url("./../../ttf/yantramanav-100.ttf");
+}
+@font-face {
+  font-family: "yan-300";
+  src: url("./../../ttf/yantramanav-300.ttf");
+}
+@font-face {
+  font-family: "yan-400";
+  src: url("./../../ttf/yantramanav-400.ttf");
+}
+@font-face {
+  font-family: "yan-500";
+  src: url("./../../ttf/yantramanav-500.ttf");
+}
+@font-face {
+  font-family: "yan-700";
+  src: url("./../../ttf/yantramanav-700.ttf");
+}
+@font-face {
+  font-family: "yan-900";
+  src: url("./../../ttf/yantramanav-900.ttf");
+}
+/* Font assignment */
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* STYLES */
 body {
-  background-color: orangered;
   margin: 0;
   font-family: rubik;
+  background-color: white;
+  background-image: url("../../../img/pokewallpaper.png");
+  background-size: 700px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 78vh;
+}
+
+/* HEADERS STYLES */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 100;
+}
+.header__container-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: rgb(255, 209, 1);
+}
+.header__logo {
+  height: 8vh;
+  padding: 10px 0px;
+}
+@media only screen and (min-width: 380px) {
+  .header__logo {
+    height: 10vh;
+    padding: 10px 0px;
+  }
+}
+.header__img-pikachu {
+  height: 6vh;
+  margin: 0px 10px;
+}
+@media only screen and (min-width: 380px) {
+  .header__img-pikachu {
+    height: 10vh;
+    margin: 0px 10px;
+  }
+}
+.header__container-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(5, 54, 80);
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px 0px;
+}
+.header__filter-button {
+  border: none;
+  background-color: rgb(5, 54, 80);
+  width: 100%;
+  height: 3vh;
   color: white;
+  font-family: "yan-500";
+  font-size: 1.1rem;
+}
+.header__container-filter-button {
+  display: flex;
+  flex-direction: row;
+}
+.header__filter-arrow {
+  fill: white;
+  width: 20px;
+  height: 20px;
 }
 
-.container {
-  padding: 40px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 50px;
-}
-
-#pokedex {
-  padding-inline-start: 0;
+/* FOOTER STYLES */
+.footer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(255, 209, 1);
+}
+.footer__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__container-squirtle {
+  background-color: #4DB3F5;
+  background-image: linear-gradient(90deg, #4DB3F5, #4DB3F5, #4DB3F5, #7DC9AB);
+}
+.footer__container-bulbasaur {
+  background-color: #7DC9AB;
+  background-image: linear-gradient(90deg, #7DC9AB, #7DC9AB, #7DC9AB, #FFF152);
+}
+.footer__container-pikachu {
+  background-color: #FFF152;
+  background-image: linear-gradient(90deg, #FFF152, #FFF152, #FFF152, #F68D24);
+}
+.footer__container-charmander {
+  background-color: #F68D24;
+  background-image: linear-gradient(90deg, #F68D24);
+}
+.footer__img {
+  height: 60px;
 }
 
-@keyframes bounce {
-  20% {
-    transform: translateY(-6px);
-  }
-  40% {
-    transform: translateY(0px);
-  }
-  60% {
-    transform: translateY(-2px);
-  }
-  80% {
-    transform: translateY(0px);
+/* STYLES */
+.filters {
+  width: 100%;
+}
+@media only screen and (min-width: 380px) {
+  .filters {
+    flex-direction: column;
   }
 }
-/* STYLES */
+.filters__forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+@media only screen and (min-width: 380px) {
+  .filters__forms {
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 20px 0px;
+    gap: 20px;
+  }
+}
+.filters__container-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+  width: 90%;
+}
+@media only screen and (min-width: 380px) {
+  .filters__container-text {
+    width: 40%;
+  }
+}
+.filters__text-label {
+  margin: 10px 0px;
+  width: 100%;
+  color: white;
+  font-family: "yan-500";
+  font-size: 1.2rem;
+  text-align: center;
+}
+.filters__text-input {
+  border: none;
+  height: 40px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0px 20px;
+}
+@media only screen and (min-width: 380px) {
+  .filters__text-input {
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
+.filters__container-button-types {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 380px) {
+  .filters__container-button-types {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 100px;
+  }
+}
+.filters__container-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  height: 31px;
+  transform: skew(-10deg);
+}
+@media only screen and (min-width: 380px) {
+  .filters__container-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transform: skew(-10deg);
+    height: 100%;
+    width: 5px;
+    transition: 0.5s;
+  }
+}
+.filters__container-button--bug {
+  background-image: linear-gradient(rgb(89, 74, 40), rgb(107, 92, 54), rgb(125, 110, 69), rgb(150, 135, 89));
+}
+.filters__container-button--dragon {
+  background-image: linear-gradient(rgb(45, 62, 18), rgb(57, 75, 28), rgb(70, 87, 38), rgb(87, 104, 52));
+}
+.filters__container-button--electric {
+  background-image: linear-gradient(rgb(161, 138, 4), rgb(198, 172, 5), rgb(233, 208, 35), rgb(250, 228, 63));
+}
+.filters__container-button--fairy {
+  background-image: linear-gradient(rgb(189, 22, 46), rgb(217, 50, 77), rgb(238, 81, 108), rgb(252, 120, 145));
+}
+.filters__container-button--fighting {
+  background-image: linear-gradient(rgb(122, 6, 15), rgb(139, 21, 31), rgb(157, 36, 47), rgb(181, 53, 66));
+}
+.filters__container-button--fire {
+  background-image: linear-gradient(rgb(161, 3, 8), rgb(185, 3, 10), rgb(209, 15, 23), rgb(238, 42, 51));
+}
+.filters__container-button--flying {
+  background-image: linear-gradient(rgb(132, 158, 6), rgb(163, 193, 7), rgb(199, 225, 47), rgb(220, 244, 74));
+}
+.filters__container-button--ghost {
+  background-image: linear-gradient(rgb(158, 158, 158), rgb(180, 180, 180), rgb(205, 205, 205), rgb(220, 220, 220));
+}
+.filters__container-button--grass {
+  background-image: linear-gradient(rgb(11, 115, 29), rgb(37, 139, 57), rgb(62, 163, 83), rgb(93, 194, 116));
+}
+.filters__container-button--ground {
+  background-image: linear-gradient(rgb(120, 44, 21), rgb(139, 60, 33), rgb(159, 76, 45), rgb(186, 99, 62));
+}
+.filters__container-button--ice {
+  background-image: linear-gradient(rgb(10, 39, 163), rgb(40, 69, 184), rgb(63, 94, 204), rgb(95, 126, 225));
+}
+.filters__container-button--normal {
+  background-image: linear-gradient(rgb(137, 109, 98), rgb(164, 136, 124), rgb(190, 164, 152), rgb(226, 203, 190));
+}
+.filters__container-button--poison {
+  background-image: linear-gradient(rgb(60, 8, 127), rgb(69, 20, 143), rgb(80, 35, 168), rgb(94, 59, 196));
+}
+.filters__container-button--psychic {
+  background-image: linear-gradient(rgb(141, 45, 213), rgb(166, 76, 233), rgb(191, 107, 253), rgb(210, 149, 255));
+}
+.filters__container-button--rock {
+  background-image: linear-gradient(rgb(132, 93, 84), rgb(158, 117, 106), rgb(181, 142, 131), rgb(213, 177, 165));
+}
+.filters__container-button--steel {
+  background-image: linear-gradient(rgb(25, 63, 96), rgb(41, 80, 112), rgb(55, 97, 128), rgb(73, 120, 150));
+}
+.filters__container-button--water {
+  background-image: linear-gradient(rgb(6, 113, 113), rgb(8, 136, 136), rgb(35, 160, 160), rgb(70, 193, 193));
+}
+.filters__button {
+  border: none;
+  color: white;
+  width: 35px;
+  height: 30px;
+  transform: skew(-10deg);
+  font-family: "yan-300";
+  font-size: 0.7rem;
+  background-color: transparent;
+}
+@media only screen and (min-width: 380px) {
+  .filters__button {
+    transform: skew(0deg);
+    rotate: 270deg;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--bug:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--dragon:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--electric:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--fairy:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--fighting:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--fire:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--flying:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--ghost:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--grass:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--ground:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--ice:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--normal:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--poison:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--psychic:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--rock:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--steel:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .filters__container-button--water:hover {
+    flex: 2.5;
+    transition: 0.5s;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px 60px 0px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  place-content: center;
+}
+.list__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 /* Blocks used in others pages */
 /* IMPORTS */
-/* FONTS */
+/* DISPLAY LAYOUTS */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* PANTONE */
+/* TYPES COLORS */
 /* DISPLAY STYLES */
+/* Neutral colors */
+/* Other colors */
+/* FONTS */
+/* Fonts upload */
+@font-face {
+  font-family: "yan-100";
+  src: url("./../../ttf/yantramanav-100.ttf");
+}
+@font-face {
+  font-family: "yan-300";
+  src: url("./../../ttf/yantramanav-300.ttf");
+}
+@font-face {
+  font-family: "yan-400";
+  src: url("./../../ttf/yantramanav-400.ttf");
+}
+@font-face {
+  font-family: "yan-500";
+  src: url("./../../ttf/yantramanav-500.ttf");
+}
+@font-face {
+  font-family: "yan-700";
+  src: url("./../../ttf/yantramanav-700.ttf");
+}
+@font-face {
+  font-family: "yan-900";
+  src: url("./../../ttf/yantramanav-900.ttf");
+}
+/* Font assignment */
 /* IMPORTS */
-/* FONTS */
+/* DISPLAY LAYOUTS */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* PANTONE */
+/* TYPES COLORS */
 /* DISPLAY STYLES */
+/* Neutral colors */
+/* Other colors */
+/* FONTS */
+/* Fonts upload */
+@font-face {
+  font-family: "yan-100";
+  src: url("./../../ttf/yantramanav-100.ttf");
+}
+@font-face {
+  font-family: "yan-300";
+  src: url("./../../ttf/yantramanav-300.ttf");
+}
+@font-face {
+  font-family: "yan-400";
+  src: url("./../../ttf/yantramanav-400.ttf");
+}
+@font-face {
+  font-family: "yan-500";
+  src: url("./../../ttf/yantramanav-500.ttf");
+}
+@font-face {
+  font-family: "yan-700";
+  src: url("./../../ttf/yantramanav-700.ttf");
+}
+@font-face {
+  font-family: "yan-900";
+  src: url("./../../ttf/yantramanav-900.ttf");
+}
+/* Font assignment */
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* STYLES */
 body {
-  background-color: orangered;
   margin: 0;
   font-family: rubik;
+  background-color: white;
+  background-image: url("../../../img/pokewallpaper.png");
+  background-size: 700px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 78vh;
+}
+
+/* HEADERS STYLES */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 100;
+}
+.header__container-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: rgb(255, 209, 1);
+}
+.header__logo {
+  height: 8vh;
+  padding: 10px 0px;
+}
+@media only screen and (min-width: 380px) {
+  .header__logo {
+    height: 10vh;
+    padding: 10px 0px;
+  }
+}
+.header__img-pikachu {
+  height: 6vh;
+  margin: 0px 10px;
+}
+@media only screen and (min-width: 380px) {
+  .header__img-pikachu {
+    height: 10vh;
+    margin: 0px 10px;
+  }
+}
+.header__container-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(5, 54, 80);
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px 0px;
+}
+.header__filter-button {
+  border: none;
+  background-color: rgb(5, 54, 80);
+  width: 100%;
+  height: 3vh;
   color: white;
+  font-family: "yan-500";
+  font-size: 1.1rem;
+}
+.header__container-filter-button {
+  display: flex;
+  flex-direction: row;
+}
+.header__filter-arrow {
+  fill: white;
+  width: 20px;
+  height: 20px;
 }
 
-.container {
-  padding: 40px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 50px;
-}
-
-#pokedex {
-  padding-inline-start: 0;
+/* FOOTER STYLES */
+.footer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(255, 209, 1);
+}
+.footer__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__container-squirtle {
+  background-color: #4DB3F5;
+  background-image: linear-gradient(90deg, #4DB3F5, #4DB3F5, #4DB3F5, #7DC9AB);
+}
+.footer__container-bulbasaur {
+  background-color: #7DC9AB;
+  background-image: linear-gradient(90deg, #7DC9AB, #7DC9AB, #7DC9AB, #FFF152);
+}
+.footer__container-pikachu {
+  background-color: #FFF152;
+  background-image: linear-gradient(90deg, #FFF152, #FFF152, #FFF152, #F68D24);
+}
+.footer__container-charmander {
+  background-color: #F68D24;
+  background-image: linear-gradient(90deg, #F68D24);
+}
+.footer__img {
+  height: 60px;
 }
 
-@keyframes bounce {
-  20% {
-    transform: translateY(-6px);
-  }
-  40% {
-    transform: translateY(0px);
-  }
-  60% {
-    transform: translateY(-2px);
-  }
-  80% {
-    transform: translateY(0px);
-  }
-}
 /* STYLES */
 /* CARDS */
 .card {
-  list-style: none;
-  padding: 40px;
-  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
   color: #222;
   text-align: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  z-index: 1;
 }
-.card-title {
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: normal;
-  margin-bottom: 0;
+.card__header {
+  width: 100%;
+  height: 70%;
 }
-.card-suptitle {
-  font-weight: lighter;
-  color: #666;
-  margin-top: 5px;
+.card__img {
+  z-index: 2;
+  height: 100%;
 }
-.card-image {
-  height: 180px;
+.card__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-color: black solid 3px;
+  width: 100%;
+  height: 30%;
+}
+.card__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 69px;
+  z-index: 10;
+  border-radius: 50%;
+  transform: translate(9px);
+}
+.card__figure--bug {
+  background-image: linear-gradient(rgb(89, 74, 40), rgb(107, 92, 54), rgb(125, 110, 69), rgb(150, 135, 89));
+  color: #222;
+}
+.card__figure--dragon {
+  background-image: linear-gradient(rgb(45, 62, 18), rgb(57, 75, 28), rgb(70, 87, 38), rgb(87, 104, 52));
+  color: #222;
+}
+.card__figure--electric {
+  background-image: linear-gradient(rgb(161, 138, 4), rgb(198, 172, 5), rgb(233, 208, 35), rgb(250, 228, 63));
+  color: #222;
+}
+.card__figure--fairy {
+  background-image: linear-gradient(rgb(189, 22, 46), rgb(217, 50, 77), rgb(238, 81, 108), rgb(252, 120, 145));
+  color: #222;
+}
+.card__figure--fighting {
+  background-image: linear-gradient(rgb(122, 6, 15), rgb(139, 21, 31), rgb(157, 36, 47), rgb(181, 53, 66));
+  color: #222;
+}
+.card__figure--fire {
+  background-image: linear-gradient(rgb(161, 3, 8), rgb(185, 3, 10), rgb(209, 15, 23), rgb(238, 42, 51));
+  color: #222;
+}
+.card__figure--flying {
+  background-image: linear-gradient(rgb(132, 158, 6), rgb(163, 193, 7), rgb(199, 225, 47), rgb(220, 244, 74));
+  color: #222;
+}
+.card__figure--ghost {
+  background-image: linear-gradient(rgb(158, 158, 158), rgb(180, 180, 180), rgb(205, 205, 205), rgb(220, 220, 220));
+  color: #222;
+}
+.card__figure--grass {
+  background-image: linear-gradient(rgb(11, 115, 29), rgb(37, 139, 57), rgb(62, 163, 83), rgb(93, 194, 116));
+  color: #222;
+}
+.card__figure--ground {
+  background-image: linear-gradient(rgb(120, 44, 21), rgb(139, 60, 33), rgb(159, 76, 45), rgb(186, 99, 62));
+  color: #222;
+}
+.card__figure--ice {
+  background-image: linear-gradient(rgb(10, 39, 163), rgb(40, 69, 184), rgb(63, 94, 204), rgb(95, 126, 225));
+  color: #222;
+}
+.card__figure--normal {
+  background-image: linear-gradient(rgb(137, 109, 98), rgb(164, 136, 124), rgb(190, 164, 152), rgb(226, 203, 190));
+  color: #222;
+}
+.card__figure--not-found {
+  background-image: linear-gradient(rgb(137, 109, 98), rgb(164, 136, 124), rgb(190, 164, 152), rgb(226, 203, 190));
+  color: #222;
+}
+.card__figure--poison {
+  background-image: linear-gradient(rgb(60, 8, 127), rgb(69, 20, 143), rgb(80, 35, 168), rgb(94, 59, 196));
+  color: #222;
+}
+.card__figure--psychic {
+  background-image: linear-gradient(rgb(141, 45, 213), rgb(166, 76, 233), rgb(191, 107, 253), rgb(210, 149, 255));
+  color: #222;
+}
+.card__figure--rock {
+  background-image: linear-gradient(rgb(132, 93, 84), rgb(158, 117, 106), rgb(181, 142, 131), rgb(213, 177, 165));
+  color: #222;
+}
+.card__figure--steel {
+  background-image: linear-gradient(rgb(25, 63, 96), rgb(41, 80, 112), rgb(55, 97, 128), rgb(73, 120, 150));
+  color: #222;
+}
+.card__figure--water {
+  background-image: linear-gradient(rgb(6, 113, 113), rgb(8, 136, 136), rgb(35, 160, 160), rgb(70, 193, 193));
+  color: #222;
+}
+.card__icon {
+  height: inherit;
+  padding: 12px;
+}
+.card__details {
+  width: 75%;
+  transform: translate(-9px);
+}
+.card__body-header {
+  width: 100%;
+}
+.card__details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  height: 35px;
+}
+.card__title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: skew(-20deg);
+  width: 90%;
+  height: 100%;
+}
+.card__title-container--bug {
+  background-color: rgba(150, 135, 89, 0.7);
+}
+.card__title-container--dragon {
+  background-color: rgba(87, 104, 52, 0.7);
+}
+.card__title-container--electric {
+  background-color: rgba(250, 228, 63, 0.7);
+}
+.card__title-container--fairy {
+  background-color: rgba(252, 120, 145, 0.7);
+}
+.card__title-container--fighting {
+  background-color: rgba(181, 53, 66, 0.7);
+}
+.card__title-container--fire {
+  background-color: rgba(238, 42, 51, 0.7);
+}
+.card__title-container--flying {
+  background-color: rgba(220, 244, 74, 0.7);
+}
+.card__title-container--ghost {
+  background-color: rgba(220, 220, 220, 0.7);
+}
+.card__title-container--grass {
+  background-color: rgba(93, 194, 116, 0.7);
+}
+.card__title-container--ground {
+  background-color: rgba(186, 99, 62, 0.7);
+}
+.card__title-container--ice {
+  background-color: rgba(95, 126, 225, 0.7);
+}
+.card__title-container--normal {
+  background-color: rgba(226, 203, 190, 0.7);
+}
+.card__title-container--not-found {
+  background-color: rgba(226, 203, 190, 0.7);
+}
+.card__title-container--poison {
+  background-color: rgba(94, 59, 196, 0.7);
+}
+.card__title-container--psychic {
+  background-color: rgba(210, 149, 255, 0.7);
+}
+.card__title-container--rock {
+  background-color: rgba(213, 177, 165, 0.7);
+}
+.card__title-container--steel {
+  background-color: rgba(73, 120, 150, 0.7);
+}
+.card__title-container--water {
+  background-color: rgba(70, 193, 193, 0.7);
+}
+.card__title {
+  transform: skew(20deg);
+  color: white;
+  font-size: 18px;
+  font-family: "yan-300";
+  font-size: 1.1rem;
+}
+.card__id-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: skew(-20deg);
+  height: 100%;
+  width: 20%;
+}
+.card__id-container--bug {
+  background-color: rgba(125, 110, 69, 0.7);
+}
+.card__id-container--dragon {
+  background-color: rgba(70, 87, 38, 0.7);
+}
+.card__id-container--electric {
+  background-color: rgba(233, 208, 35, 0.7);
+}
+.card__id-container--fairy {
+  background-color: rgba(238, 81, 108, 0.7);
+}
+.card__id-container--fighting {
+  background-color: rgba(157, 36, 47, 0.7);
+}
+.card__id-container--fire {
+  background-color: rgba(209, 15, 23, 0.7);
+}
+.card__id-container--flying {
+  background-color: rgba(199, 225, 47, 0.7);
+}
+.card__id-container--ghost {
+  background-color: rgba(205, 205, 205, 0.7);
+}
+.card__id-container--grass {
+  background-color: rgba(62, 163, 83, 0.7);
+}
+.card__id-container--ground {
+  background-color: rgba(159, 76, 45, 0.7);
+}
+.card__id-container--ice {
+  background-color: rgba(63, 94, 204, 0.7);
+}
+.card__id-container--normal {
+  background-color: rgba(190, 164, 152, 0.7);
+}
+.card__id-container--not-found {
+  background-color: rgba(190, 164, 152, 0.7);
+}
+.card__id-container--poison {
+  background-color: rgba(80, 35, 168, 0.7);
+}
+.card__id-container--psychic {
+  background-color: rgba(191, 107, 253, 0.7);
+}
+.card__id-container--rock {
+  background-color: rgba(181, 142, 131, 0.7);
+}
+.card__id-container--steel {
+  background-color: rgba(55, 97, 128, 0.7);
+}
+.card__id-container--water {
+  background-color: rgba(35, 160, 160, 0.7);
+}
+.card__id {
+  transform: skew(20deg);
+  color: white;
+  font-size: 18px;
+  font-family: "yan-700";
+  font-size: 1.2rem;
+}
+.card__body-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+}
+.card__types-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 78%;
+}
+.card__type-text {
+  transform: skew(20deg);
+  color: white;
+  font-family: "yan-100";
+  font-size: 0.7rem;
+}
+.card__type {
+  transform: skew(-20deg);
+  width: 100%;
+  font-size: 10px;
+}
+.card__type--bug {
+  background-color: rgba(89, 74, 40, 0.7);
+}
+.card__type--dragon {
+  background-color: rgba(45, 62, 18, 0.7);
+}
+.card__type--electric {
+  background-color: rgba(161, 138, 4, 0.7);
+}
+.card__type--fairy {
+  background-color: rgba(189, 22, 46, 0.7);
+}
+.card__type--fighting {
+  background-color: rgba(122, 6, 15, 0.7);
+}
+.card__type--fire {
+  background-color: rgba(161, 3, 8, 0.7);
+}
+.card__type--flying {
+  background-color: rgba(132, 158, 6, 0.7);
+}
+.card__type--ghost {
+  background-color: rgba(158, 158, 158, 0.7);
+}
+.card__type--grass {
+  background-color: rgba(11, 115, 29, 0.7);
+}
+.card__type--ground {
+  background-color: rgba(120, 44, 21, 0.7);
+}
+.card__type--ice {
+  background-color: rgba(10, 39, 163, 0.7);
+}
+.card__type--normal {
+  background-color: rgba(137, 109, 98, 0.7);
+}
+.card__type--not-found {
+  background-color: rgba(137, 109, 98, 0.7);
+}
+.card__type--poison {
+  background-color: rgba(60, 8, 127, 0.7);
+}
+.card__type--psychic {
+  background-color: rgba(141, 45, 213, 0.7);
+}
+.card__type--rock {
+  background-color: rgba(132, 93, 84, 0.7);
+}
+.card__type--steel {
+  background-color: rgba(25, 63, 96, 0.7);
+}
+.card__type--water {
+  background-color: rgba(6, 113, 113, 0.7);
 }/*# sourceMappingURL=pokedex.css.map */

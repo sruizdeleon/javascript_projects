@@ -4,3 +4,293 @@
 
 
 /* STYLES */
+
+
+// Filter section
+
+.filters {
+    @extend %display-flex-column-justifyCenter-alingCenter;
+    width: 100%;
+    @include desktop {
+        flex-direction: column;
+    }
+
+    // Search form
+    &__forms {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include desktop {
+            flex-direction: row;
+            max-width: 1000px;
+            margin: 20px 0px;
+            gap: 20px
+        }
+    }
+
+    // Text filter
+    &__container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0px;
+        width: 90%;
+        @include desktop {
+            width: 40%;
+        }
+    }
+    &__text-label {
+        margin: 10px 0px;
+        width: 100%;
+        color: $color-white;
+        font-family: $font-princial-500;
+        font-size: $font-size-normal;
+        text-align: center;
+    }
+    &__text-input {
+        border: none;
+        height: 40px;
+        width: 100%;
+        border-radius: 20px;
+        padding: 0px 20px;
+        @include desktop {
+            width: 100%;
+            padding: 0px 20px;
+        }
+    }
+
+
+    // Button types filter
+    &__container-button-types {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: fit-content;
+        margin-bottom: 10px;
+        @include desktop {
+            display: inline-flex;
+            align-items: center;
+            justify-content:space-around;
+            width: 60%;
+            height: 100px;
+        }
+    }
+    &__container-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        color: white;
+        width: max-content;
+        height: 31px;
+        transform: skew(-10deg);
+        @include desktop {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $font-size-small;
+            transform: skew(-10deg);
+            height: 100%;
+            width: 5px;
+            transition: 0.5s;
+        }
+
+        &--bug{
+            background-image: linear-gradient($color-type-bug-color4, $color-type-bug-color3, $color-type-bug-color2, $color-type-bug-color1);
+        }
+        &--dragon{
+            background-image: linear-gradient($color-type-dragon-color4, $color-type-dragon-color3, $color-type-dragon-color2, $color-type-dragon-color1);
+        }
+        &--electric{
+            background-image: linear-gradient($color-type-electric-color4, $color-type-electric-color3, $color-type-electric-color2, $color-type-electric-color1);
+        }
+        &--fairy{
+            background-image: linear-gradient($color-type-fairy-color4, $color-type-fairy-color3, $color-type-fairy-color2, $color-type-fairy-color1);
+        }
+        &--fighting{
+            background-image: linear-gradient($color-type-fighting-color4, $color-type-fighting-color3, $color-type-fighting-color2, $color-type-fighting-color1);
+        }
+        &--fire{
+            background-image: linear-gradient($color-type-fire-color4, $color-type-fire-color3, $color-type-fire-color2, $color-type-fire-color1);
+        }
+        &--flying{
+            background-image: linear-gradient($color-type-flying-color4, $color-type-flying-color3, $color-type-flying-color2, $color-type-flying-color1);
+        }
+        &--ghost{
+            background-image: linear-gradient($color-type-ghost-color4, $color-type-ghost-color3, $color-type-ghost-color2, $color-type-ghost-color1);
+        }
+        &--grass{
+            background-image: linear-gradient($color-type-grass-color4, $color-type-grass-color3, $color-type-grass-color2, $color-type-grass-color1);
+        }
+        &--ground{
+            background-image: linear-gradient($color-type-ground-color4, $color-type-ground-color3, $color-type-ground-color2, $color-type-ground-color1);
+        }
+        &--ice{
+            background-image: linear-gradient($color-type-ice-color4, $color-type-ice-color3, $color-type-ice-color2, $color-type-ice-color1);
+        }
+        &--normal{
+            background-image: linear-gradient($color-type-normal-color4, $color-type-normal-color3, $color-type-normal-color2, $color-type-normal-color1);
+        }
+        &--poison{
+            background-image: linear-gradient($color-type-poison-color4, $color-type-poison-color3, $color-type-poison-color2, $color-type-poison-color1);
+        }
+        &--psychic{
+            background-image: linear-gradient($color-type-psychic-color4, $color-type-psychic-color3, $color-type-psychic-color2, $color-type-psychic-color1);
+        }
+        &--rock{
+            background-image: linear-gradient($color-type-rock-color4, $color-type-rock-color3, $color-type-rock-color2, $color-type-rock-color1);
+        }
+        &--steel{
+            background-image: linear-gradient($color-type-steel-color4, $color-type-steel-color3, $color-type-steel-color2, $color-type-steel-color1);
+        }
+        &--water{
+            background-image: linear-gradient($color-type-water-color4, $color-type-water-color3, $color-type-water-color2, $color-type-water-color1);
+        }
+    }
+    &__button {
+        border: none;
+        color: white;
+        width: 35px;
+        height: 30px;
+        transform: skew(-10deg);
+        font-family: $font-princial-300;
+        font-size: $font-size-extra-small;
+        background-color: transparent;
+        @include desktop {
+            transform: skew(0deg);
+            rotate: 270deg;
+        }
+    }
+}
+
+.filters__container-button--bug:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--dragon:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--electric:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--fairy:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--fighting:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--fire:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--flying:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--ghost:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--grass:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--ground:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--ice:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--normal:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--poison:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--psychic:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--rock:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--steel:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+.filters__container-button--water:hover {
+    @include desktop {
+        flex: 2.5;
+        transition: 0.5s;
+    }
+}
+
+// Pokemons list section
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px 60px 0px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    place-content: center;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}

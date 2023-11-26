@@ -11,10 +11,44 @@
 </head>
 
 <body>
-    <section class="container">
-        <h1>Pokedex</h1>
-        <div id="pokedex"></div>
-    </section>
+    <header class="header">
+        <div class="header__container-logo">
+            <img class="header__img-pikachu" src="./assets/img/pikachu.jpg" alt="pikachu">
+            <img class="header__logo" src="./assets/img/pokemon_logo.png" alt="logo pokemon">
+            <img class="header__img-pikachu" src="./assets/img/pikachu.jpg" alt="pikachu">
+        </div>
+        <div class="header__container-filters">
+            <div class="header__container-filter-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill header__filter-arrow" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+                <button class="header__filter-button" id="create-filters">Filters</button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill header__filter-arrow" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+            </div>
+            <div class="filters"></div>
+        </div>
+    </header>
+    <main>
+        <section class="list">
+            <div class="list__container"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container footer__container-squirtle">
+            <img class="footer__img" src="./assets/img/footer/squirtle_footer.jpg" alt="">
+        </div>
+        <div class="footer__container footer__container-bulbasaur">
+            <img class="footer__img" src="./assets/img/footer/bulbasaur_footer.jpg" alt="">
+        </div>
+        <div class="footer__container footer__container-pikachu">
+            <img class="footer__img" src="./assets/img/footer/pikachu_footer.jpg" alt="">
+        </div>
+        <div class="footer__container footer__container-charmander">
+            <img class="footer__img" src="./assets/img/footer/charmander_footer.jpg" alt="">
+        </div>
+    </footer>
     <script src="./assets/js/pokedex.js"></script>
 </body>
 
